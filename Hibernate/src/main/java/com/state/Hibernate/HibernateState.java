@@ -11,6 +11,8 @@ public class HibernateState {
 		configuration.configure("hibernate.cfg.xml");
 		SessionFactory sessionFactory=configuration.buildSessionFactory();
 		Session session=sessionFactory.openSession(); 
+		session.close();
+		System.out.println("Session closed here");
 
 	}
 
